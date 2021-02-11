@@ -1,8 +1,17 @@
 let randomNumber = Math.floor(Math.random() * 100 + 1);
-
+console.log(randomNumber);
 function guessNumber() {
   //Collect input from the user
   let guess = document.querySelector(".inputs-Values").value;
+  let msg  = document.querySelector(".final-output");
+  // let guesses = document.getElementById(".final-output");
+  if(guess != randomNumber){
+   msg.textContent = "Guess is wrong.";
+  }else{
+    msg.textContent = `You win the number was ${randomNumber}`;
+  }
+  
+
 
   //If the user inputs a bad input ie 0, empty string, number greater that 100, number less than zero Print "Please enter a number between 1 and 100"
 
@@ -18,6 +27,11 @@ function guessNumber() {
 // 1. Reset the values inside the body of the function
 // 2. Attach our new game button using an event listener to the .btnNewGame button
 function newGame() {
+  guessInput.value = "";
+  counter = 0;
+  outPut.value = "guess a new number.";
+  randomNumber = Math.floor(Math.random()*100) + 1;
+  return false;
   //Your code here
   //Reset randomNumber
   //Reset users input field

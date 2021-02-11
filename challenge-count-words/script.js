@@ -1,5 +1,45 @@
 function calculateWords(chapterOfABook) {
   const wordCount = {};
+    let elem = chapterOfABook.split(" ")
+   .forEach(function(word){
+     if(word!==""){
+     let CWCount = wordCount[word]|| 0;
+     wordCount[word] = CWCount + 1;
+   }
+  });
+
+//    var punctuation = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~';
+
+// function removePunctuation(string) {
+//   return string
+//     .split('')
+//     .filter(function(letter) {
+//       return punctuation.indexOf(letter) === -1;
+//     })
+//     .join('');
+//   }
+
+
+   
+  //  
+  // let count = 1;
+  // for(let i =0; i < word.length;i++){
+  //   if(word[i] === word [i + 1]){
+  //     count++;
+  //   }else{
+  //     let value = `${count} ${word[i]}`;
+  //     count = 1;
+  //   }
+  // }
+// for(i =0; i< chapterOfABook.length; i++){
+//   if(!wordCount[word]){
+//     wordCount[word] = 1;
+//   }else{
+//     wordCount[word] += 1;
+//   }
+  
+// }
+
 
   // Write your code in here
 
